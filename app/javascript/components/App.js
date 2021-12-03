@@ -11,8 +11,7 @@ const App = () => (
   <Provider store={Store}>
     <Router>
       <Routes>
-        <Route exact path="/" element={<p>Home Page!!</p>} />
-        <Route exact path="/greeting" element={<Greeting />} />
+        <Route exact path="/" element={<Greeting />} />
       </Routes>
     </Router>
   </Provider>
