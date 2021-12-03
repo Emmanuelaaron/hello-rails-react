@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Card, Button } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import { fetchGreeting } from '../redux/greeting';
-
 
 const Greeting = () => {
   const dispatch = useDispatch();
@@ -27,6 +26,6 @@ const Greeting = () => {
       </Card>
     </>
   );
-}
+};
 
-export default Greeting
+export default Greeting;
