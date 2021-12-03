@@ -1,11 +1,20 @@
-import React from "react"
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Greeting from './Greeting';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import './style.css';
+import Store from '../redux/ConfigureStore';
 
-const App = () => {
-    return (
-      <React.Fragment>
-        <h1>hih</h1>
-      </React.Fragment>
-    );
-}
+const App = () => (
+  <Provider store={Store}>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Greeting />} />
+      </Routes>
+    </Router>
+  </Provider>
+);
 
-export default App
+export default App;
