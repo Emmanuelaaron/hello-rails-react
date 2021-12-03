@@ -1,11 +1,22 @@
 import React from "react"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import Greeting from "./Greeting"
+import { Provider } from 'react-redux';
+import Store from "../redux/ConfigureStore";
 
-const App = () => {
+class App extends React.Component {
+  render () {
     return (
-      <React.Fragment>
-        <h1>hih</h1>
-      </React.Fragment>
+      <Provider store={Store} >
+        <Router>
+          <Routes>
+            <Route exact path="/" element={ <p>Home Page!!</p> } />
+            <Route exact path="/greeting" element={ <Greeting/> } />
+          </Routes>
+        </Router>
+      </Provider>
     );
+  }
 }
 
 export default App
